@@ -1,0 +1,21 @@
+<h1>Adicionar Armas</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Nome da arma:</label>
+    <input name="nome" value="{{ arma.nome }}">
+  </div>
+  
+  <div>
+    <label>País de origem:</label>
+    <input name="origem" value="{{ arma.origem }}">   
+  </div>
+  
+  <div>
+    <label>Calibre:</label>
+    <input name="calibre" value="{{ arma.calibre }}">
+  </div>
+
+  <input type="submit" value="Registrar">
+</form>

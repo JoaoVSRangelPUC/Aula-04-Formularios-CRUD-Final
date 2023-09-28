@@ -1,0 +1,16 @@
+<h1>Adicionar Mapas à Tabela</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Nome do mapa:</label>
+    <input name="nome" value="{{ local.nome }}">
+  </div>
+  
+  <div>
+    <label>Localização:</label>
+    <input name="local" value="{{ local.local }}">   
+  </div>
+
+  <input type="submit" value="Registrar">
+</form>

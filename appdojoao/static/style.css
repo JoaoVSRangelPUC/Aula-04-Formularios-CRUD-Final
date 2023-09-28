@@ -1,0 +1,42 @@
+html {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: #d27474;
+}
+
+h1 {
+  font-family: "Monaco", monospace;
+  text-align: center;
+}
+
+h2 {
+  font-family: "Monaco", monospace;
+  text-align: center;
+}
+
+h3 {
+  font-family: "Monaco", monospace;
+}
+
+p {
+  font-family: "Monaco", monospace;
+}
+
+table {
+  font-family: "Monaco", monospace;
+}
+
+li {
+  font-family: "Lucida Console", monospace;
+}
+
+table, th, td {
+  border: 1px solid;
+}
+
+div {
+      text-align: center;
+    }

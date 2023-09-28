@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>João Victor de Souza Rangel</title>
+  {% load static %}
+  <link href="{% static 'style.css' %}" rel="stylesheet" type="text/css"/>
+</head>
+
+<body>
+  <h1>João Victor de Souza Rangel</h1>
+  <h2>Tema escolhido: O que se sabe sobre o <b>Call of Duty Modern Warfare III</b> (MWIII)</h2>
+
+<div>
+    <img  src="https://meups.com.br/wp-content/uploads/2023/08/modern-warfare-iii-1-1.jpg" width="300" height="500" alt="Modern Warfare III" />
+  
+</div>
+  
+  
+  <p>Neste site, você vai estar por dentro das últimas notícias relacionadas ao jogo, que está previsto para ser lançado dia <b>10/11/2023</b></p>
+
+  <h3>O que já foi confirmado pela <i>Activision</i> (Publicadora do jogo):</h3>
+  <ul>
+    <li>Todos os mapas do Modern Warfare 2 (2009), exceto os mapas de conteúdo pago do jogo original, estarão no MWIII no dia de lançamento</li>
+    <li>Praticamente todo o conteúdo do Modern Warfare II (2022), como armas e cosméticos, será transferido para o MWIII </li>
+    <li>Pela primeira vez na história da franquia, o famoso modo <em><b>Zombies</b></em> chega à saga Modern Warfare</li>
+    <li>O antigo e famoso vilão da franquia, Makarov, retornará ao MWIII</li>
+  </ul>
+  
+<p><a href="https://www.callofduty.com/blog/2023/08/new-chapter-in-call-of-dutys-modern-warfare-universe-begins-tomorrow">Fonte das informações dadas acima</a></p>
+
+<h3>Algumas das minhas armas prediletas que estarão presentes no MWIII:</h3>
+<ul>
+  {% for arma in armas %}
+    <li>{{ arma.nome }} 
+      <a href="/guns/update/{{ arma.id }}"> Atualizar </a>
+      <a href="/guns/delete/{{ arma.id }}"> Remover </a>
+    </li>
+  {% endfor %}
+</ul>
+<a href="/guns">Adicionar Nova Arma</a>
+
+
+<h3>Lista dos meus mapas favoritos do Modern Warfare 2 (2009) que eu quero jogar no MWIII:</h3>
+<ol>
+  {% for mapa in mapas %}
+    <li>{{ mapa.name }} 
+      <a href="/maps/update/{{ mapa.id }}"> Atualizar </a> 
+      <a href="/maps/delete/{{ mapa.id }}"> Remover </a> 
+    </li>
+  {% endfor %}
+</ol>
+<a href="/maps">Adicionar Novo Mapa</a>
+  
+<h3>A tabela abaixo mostra algumas localizações dos mapas do Modern Warfare 2 (2009):</h3>
+<table>
+  <tr>
+    <th>Nome do Mapa</th>
+    <th>Localização do Mapa</th>
+  </tr>
+  
+  {% for local in locais %}
+  <tr>
+    <td>{{ local.nome }} <a href="/mapsTable/update/{{ local.id }}"> Atualizar </a> </td>
+    <td>{{ local.local }} <a href="/mapsTable/update/{{ local.id }}"> Atualizar </a> </td>
+  </tr>
+  {% endfor %}
+  
+</table>
+<a href="/mapsTable">Adicionar Novo Mapa à Tabela</a>
+
+  
+  
+  
+  <script src="script.js"></script>
+
+  <!--
+  This script places a badge on your repl's full-browser view back to your repl's cover
+  page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+  teal, blue, blurple, magenta, pink!
+  -->
+  <script src="https://replit.com/public/js/replit-badge-v2.js" theme="dark" position="bottom-right"></script>
+</body>
+
+</html>  

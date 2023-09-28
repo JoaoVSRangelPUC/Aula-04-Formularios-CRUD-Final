@@ -1,0 +1,21 @@
+<h1>{{ action }} Mapas</h1>
+
+<form method="post">
+  {% csrf_token %}
+  <div>
+    <label>Nome do mapa:</label>
+    <input name="name" value="{{ mapa.name }}">
+  </div>
+  
+  <div>
+    <label>Localização:</label>
+    <input name="local" value="{{ mapa.local }}">   
+  </div>
+  
+  <div>
+    <label>Modo:</label>
+    <input name="modos" value="{{ mapa.modos }}">
+  </div>
+
+  <input type="submit" value="Registrar">
+</form>
