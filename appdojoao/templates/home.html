@@ -10,6 +10,12 @@
 </head>
 
 <body>
+  
+  {% if request.user.is_authenticated %}
+    <b>Bem-vindo, {{request.user.username}}</b> <br> 
+    <a href="/users/logout">Sair</a>
+  {% endif %}
+  
   <h1>João Victor de Souza Rangel</h1>
   <h2>Tema escolhido: O que se sabe sobre o <b>Call of Duty Modern Warfare III</b> (MWIII)</h2>
 
@@ -17,7 +23,6 @@
     <img  src="https://meups.com.br/wp-content/uploads/2023/08/modern-warfare-iii-1-1.jpg" width="300" height="500" alt="Modern Warfare III" />
   
 </div>
-  
   
   <p>Neste site, você vai estar por dentro das últimas notícias relacionadas ao jogo, que está previsto para ser lançado dia <b>10/11/2023</b></p>
 
